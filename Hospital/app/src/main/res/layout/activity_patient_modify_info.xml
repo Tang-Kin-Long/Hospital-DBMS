@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".patient_modifyInfo">
+
+    <TextView
+        android:id="@+id/patient_modify_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Information"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/patient_modify_pid_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Patient ID:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/patient_modify_pid_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Patient ID"
+        android:gravity="center_vertical"
+        android:textSize="25sp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@id/patient_modify_pid_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/patient_modify_name_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Name:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_pid_label"/>
+
+    <EditText
+        android:id="@+id/patient_modify_name_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input test result"
+        android:hint="Input patient name"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/patient_modify_name_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_pid_input"/>
+
+    <TextView
+        android:id="@+id/patient_modify_phone_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Phone:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_name_label"/>
+
+    <EditText
+        android:id="@+id/patient_modify_phone_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input test result"
+        android:hint="Input phone number"
+        android:inputType="phone"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/patient_modify_phone_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_name_input"/>
+
+    <TextView
+        android:id="@+id/patient_modify_age_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Age:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_phone_label"/>
+
+    <EditText
+        android:id="@+id/patient_modify_age_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input age"
+        android:hint="Input age"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/patient_modify_age_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_phone_input"/>
+
+    <TextView
+        android:id="@+id/patient_modify_sex_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/sex"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_age_label"/>
+
+    <RadioGroup
+        android:id="@+id/patient_modify_sex_option"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:checkedButton="@id/option_male"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/patient_modify_sex_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_age_input">
+
+        <RadioButton
+            android:id="@+id/option_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:textSize="25sp"/>
+
+        <RadioButton
+            android:id="@+id/option_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:textSize="25sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/patient_modify_pwd_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Password:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_sex_label"/>
+
+    <EditText
+        android:id="@+id/patient_modify_pwd_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input bed number"
+        android:hint="Input password"
+        android:inputType="numberPassword"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/patient_modify_pwd_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_sex_option"/>
+
+
+    <Button
+        android:id="@+id/patient_modify_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/commit"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_pwd_label"/>
+
+    <Button
+        android:id="@+id/patient_modify_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textSize="25sp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@id/patient_modify_commit"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

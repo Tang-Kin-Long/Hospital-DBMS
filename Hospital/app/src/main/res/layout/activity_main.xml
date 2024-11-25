@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/admin_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hospital Database\nManagement System"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/login_label_user"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/user_id"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/login_input_user"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your ID"
+        android:hint="@string/input_your_id"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toEndOf="@id/login_label_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/login_label_pwd"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/password"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_label_user"/>
+
+    <EditText
+        android:id="@+id/login_input_pwd"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your ID"
+        android:hint="@string/input_your_password"
+        android:inputType="numberPassword"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/login_label_pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_input_user"/>
+
+    <Button
+        android:id="@+id/login_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/login_input_pwd"/>
+
+    <Button
+        android:id="@+id/login_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textSize="25sp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@id/login_login"/>
+
+    <TextView
+        android:id="@+id/admin_author_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Author: Jianlang Deng, SCUT"
+        android:textSize="20sp"
+        android:textColor="#71cc98"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="600dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

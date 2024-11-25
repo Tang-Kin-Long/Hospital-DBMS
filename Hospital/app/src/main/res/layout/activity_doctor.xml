@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".doctor">
+
+    <TextView
+        android:id="@+id/doctor_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Doctor"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/doctor_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_treatment"
+        android:textSize="25sp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/doctor_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_patient_history"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new"/>
+
+    <Button
+        android:id="@+id/doctor_modify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/modify_your_information"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/doctor_view"/>
+
+    <Button
+        android:id="@+id/doctor_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textSize="25sp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@id/doctor_modify"/>
+
+    <TextView
+        android:id="@+id/doctor_ack_warn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/doctor_logout"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:textColor="@color/design_default_color_error"
+        android:text="@string/ack_warn"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

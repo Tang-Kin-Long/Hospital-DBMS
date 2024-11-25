@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".doctor_newTreatment">
+
+    <TextView
+        android:id="@+id/doctor_new_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create New Treatment"
+        android:textSize="25sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/doctor_new_date_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Date: "
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/doctor_new_date_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your ID"
+        android:hint="Input treatment date"
+        android:inputType="text"
+        android:textSize="25sp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@id/doctor_new_date_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextFields" />
+
+    <TextView
+        android:id="@+id/doctor_new_pid_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Patient ID: "
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_date_label"/>
+
+    <EditText
+        android:id="@+id/doctor_new_pid_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input patient ID"
+        android:hint="Input patient ID"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/doctor_new_pid_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_date_input"/>
+
+    <TextView
+        android:id="@+id/doctor_new_pharmacy_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Pharmacy: "
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_pid_label"/>
+
+    <EditText
+        android:id="@+id/doctor_new_pharmacy_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input pharmacy name"
+        android:hint="Input pharmacy name"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/doctor_new_pharmacy_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_pid_input"/>
+
+    <TextView
+        android:id="@+id/doctor_new_result_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Test result:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_pharmacy_label"/>
+
+    <EditText
+        android:id="@+id/doctor_new_result_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input test result"
+        android:hint="Input test result"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/doctor_new_result_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_pharmacy_input"/>
+
+    <TextView
+        android:id="@+id/doctor_new_bed_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Bed:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_result_label"/>
+
+    <EditText
+        android:id="@+id/doctor_new_bed_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input bed number"
+        android:hint="Input bed number"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/doctor_new_bed_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_result_input"/>
+
+    <Button
+        android:id="@+id/doctor_new_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/commit"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_bed_input"/>
+
+    <Button
+        android:id="@+id/doctor_new_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textSize="25sp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@id/doctor_new_commit"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

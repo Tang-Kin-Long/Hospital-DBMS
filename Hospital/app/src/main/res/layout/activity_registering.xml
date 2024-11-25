@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".registering">
+
+    <TextView
+        android:id="@+id/register_label_user"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/user_id"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/register_input_user"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your ID"
+        android:hint="@string/input_your_id"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@id/register_label_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/register_label_pwd"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/password"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_user"/>
+
+    <EditText
+        android:id="@+id/register_input_pwd"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your password"
+        android:hint="@string/input_your_password"
+        android:inputType="numberPassword"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/register_label_pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_input_user"/>
+
+    <TextView
+        android:id="@+id/register_label_name"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/name"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_pwd"/>
+
+    <EditText
+        android:id="@+id/register_input_name"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your name"
+        android:hint="@string/input_your_name"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/register_label_pwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_input_pwd"/>
+
+    <TextView
+        android:id="@+id/register_label_phone"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/phone"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_name"/>
+
+    <EditText
+        android:id="@+id/register_input_phone"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your phone"
+        android:hint="@string/your_phone_number"
+        android:inputType="number|phone"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/register_label_phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_input_name"/>
+
+    <TextView
+        android:id="@+id/register_label_sex"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/sex"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_phone"/>
+
+    <RadioGroup
+        android:id="@+id/register_sex_option"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:checkedButton="@id/option_male"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/register_label_sex"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_phone">
+
+        <RadioButton
+            android:id="@+id/option_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:textSize="25sp"/>
+
+        <RadioButton
+            android:id="@+id/option_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:textSize="25sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/register_label_age"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/age"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_sex"/>
+
+    <EditText
+        android:id="@+id/register_input_age"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your age"
+        android:hint="@string/input_your_age"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/register_label_age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_sex_option"/>
+
+    <TextView
+        android:id="@+id/register_label_role"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/role"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_age"/>
+
+    <RadioGroup
+        android:id="@+id/register_role_option"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:checkedButton="@id/option_patient"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/register_label_role"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_age">
+
+        <RadioButton
+            android:id="@+id/option_patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient"
+            android:textSize="25sp"/>
+
+        <RadioButton
+            android:id="@+id/option_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/doctor"
+            android:textSize="25sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/register_label_dept"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="@string/department"
+        android:textSize="22sp"
+        android:gravity="center_vertical"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_label_role"/>
+
+    <EditText
+        android:id="@+id/register_input_dept"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your department"
+        android:hint="@string/input_your_department"
+        android:inputType="text"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@id/register_label_dept"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_role_option"/>
+
+    <Button
+        android:id="@+id/register_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/commit"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/register_label_dept"/>
+
+    <Button
+        android:id="@+id/register_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textSize="25sp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@id/register_commit"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

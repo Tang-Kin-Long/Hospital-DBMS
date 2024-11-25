@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/dbms_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/dbms_circle_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hospital"
+        tools:targetApi="31">
+        <activity
+            android:name=".admin_modify"
+            android:exported="false" />
+        <activity
+            android:name=".admin_treat_insert"
+            android:exported="false" />
+        <activity
+            android:name=".admin_treat"
+            android:exported="false" />
+        <activity
+            android:name=".admin_nurse_insert"
+            android:exported="false" />
+        <activity
+            android:name=".admin_nurse"
+            android:exported="false" />
+        <activity
+            android:name=".admin_doctor_insert"
+            android:exported="false" />
+        <activity
+            android:name=".admin_doctor"
+            android:exported="false" />
+        <activity
+            android:name=".admin_patient_insert"
+            android:exported="false" />
+        <activity
+            android:name=".admin_patient"
+            android:exported="false" />
+        <activity
+            android:name=".admin_room_modify"
+            android:exported="false" />
+        <activity
+            android:name=".admin_room_insert"
+            android:exported="false" />
+        <activity
+            android:name=".admin_room"
+            android:exported="false" />
+        <activity
+            android:name=".admin_verify"
+            android:exported="false" />
+        <activity
+            android:name=".patient_treat_detail"
+            android:exported="false" />
+        <activity
+            android:name=".patient_treat"
+            android:exported="false" />
+        <activity
+            android:name=".patient_view"
+            android:exported="false" />
+        <activity
+            android:name=".doctor_view"
+            android:exported="false" />
+        <activity
+            android:name=".patient_modifyInfo"
+            android:exported="false" />
+        <activity
+            android:name=".doctor_modifyInfo"
+            android:exported="false" />
+        <activity
+            android:name=".doctor_newTreatment"
+            android:exported="false" />
+        <activity
+            android:name=".registering"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.registering"
+            android:exported="false"
+            android:label="@string/title_activity_registering" />
+        <activity
+            android:name=".doctor"
+            android:exported="false" />
+        <activity
+            android:name=".patient"
+            android:exported="false" />
+        <activity
+            android:name=".admin"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

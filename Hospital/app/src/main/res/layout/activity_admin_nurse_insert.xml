@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".admin_nurse_insert">
+
+    <TextView
+        android:id="@+id/admin_nurse_insert_nid_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Nurse ID:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/admin_nurse_insert_nid_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input nurse ID"
+        android:hint="Input nurse ID"
+        android:inputType="numberDecimal"
+        android:textSize="25sp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toEndOf="@id/admin_nurse_insert_nid_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/admin_nurse_insert_nname_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Nurse Name:"
+        android:textSize="22sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/admin_nurse_insert_nid_label"/>
+
+    <EditText
+        android:id="@+id/admin_nurse_insert_nname_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your password"
+        android:hint="Input nurse name"
+        android:inputType="text"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/admin_nurse_insert_nname_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/admin_nurse_insert_nid_input"/>
+
+    <TextView
+        android:id="@+id/admin_nurse_insert_phone_label"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Phone:"
+        android:textSize="25sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/admin_nurse_insert_nname_label"/>
+
+    <EditText
+        android:id="@+id/admin_nurse_insert_phone_input"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:autofillHints="Input your name"
+        android:hint="Input nurse phone"
+        android:inputType="phone"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/admin_nurse_insert_phone_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/admin_nurse_insert_nname_input"/>
+
+    <Button
+        android:id="@+id/admin_nurse_insert_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insert"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@id/admin_nurse_insert_phone_label"/>
+
+    <Button
+        android:id="@+id/admin_nurse_insert_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:textSize="25sp"
+        android:backgroundTint="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@id/admin_nurse_insert_commit"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
