@@ -75,7 +75,7 @@ public class admin_nurse_insert extends AppCompatActivity {
                                 ContentValues values=new ContentValues();
                                 values.put("nid",Integer.parseInt(nid_get));
                                 values.put("nName",nname_get);
-                                values.put("nurse_phone",Integer.parseInt(nid_get));
+                                values.put("nurse_phone",Integer.parseInt(phone_get));
                                 db.insert("nurse",null,values);
                                 Toast.makeText(admin_nurse_insert.this,"Successful Insert",Toast.LENGTH_SHORT).show();
                         }
